@@ -3,10 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple HTML Page</title>
+    <title>My Complex HTML Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Simple HTML Page</h1>
-    <p>This is a paragraph of text on my simple HTML page.</p>
+    <header>
+        <h1>Welcome to My Complex HTML Page</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>Interactive Content</h2>
+            <p>This is a more complex HTML page with interactive content.</p>
+            <button onclick="toggleContent()">Click me to toggle content</button>
+            <div id="extraContent" class="hidden">
+                <p>This content is toggled by the button above.</p>
+                <img src="https://via.placeholder.com/400" alt="Sample Image">
+            </div>
+        </div>
+        <div class="card">
+            <h2>Another Section</h2>
+            <p>Here is another section with some text and an image.</p>
+            <img src="https://via.placeholder.com/600x200" alt="Sample Image">
+        </div>
+    </div>
+    <footer>
+        <p>Footer Content Here</p>
+    </footer>
+    <script>
+        function toggleContent() {
+            var content = document.getElementById('extraContent');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
